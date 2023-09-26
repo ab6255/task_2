@@ -1,4 +1,4 @@
-#import sys
+import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLineEdit, QLabel
 
 class CalculatorApp(QWidget):
@@ -9,6 +9,7 @@ class CalculatorApp(QWidget):
 
         self.init_ui()
 
+    def init_ui(self):
         # Create widgets
         self.result_label = QLabel(self)
         self.result_label.setText("Result:")
@@ -86,5 +87,4 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = CalculatorApp()
     window.show()
-    sys.exit(app.exec_()) Auto detect text files and perform LF normalization
-* text=auto
+    sys.exit(app.exec_())
